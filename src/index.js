@@ -41,7 +41,7 @@ client.on("ready", () => {
   });
 });
 
-//HTTP SERVER IN ORDER TO NO GET KILLED BY HEROKU
+//HTTP SERVER IN ORDER TO NOT GET KILLED BY HEROKU
 import http from "http";
 http
   .createServer(function (req, res) {
