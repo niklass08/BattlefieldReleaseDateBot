@@ -42,7 +42,7 @@ client.on("ready", () => {
 });
 
 //HTTP SERVER IN ORDER TO NO GET KILLED BY HEROKU
-const http = require("http");
+import http from "http";
 http
   .createServer(function (req, res) {
     res.writeHead(200, { "Content-Type": "text/plain" });
