@@ -10,6 +10,12 @@ client.on("message", (message) => {
     message.channel.send(
       `Battlefield release date: ${config.BATTLEFIELD_DATE}`
     );
+  } else if (message.content === "!days") {
+    const now = new Date();
+    const start = moment(now);
+    const end = moment(config.BATTLEFIELD_DATE);
+    const diff = end.diff(start, "days");
+    message.channel.send("Battlefield 2042 J-" + diff);
   }
 });
 
